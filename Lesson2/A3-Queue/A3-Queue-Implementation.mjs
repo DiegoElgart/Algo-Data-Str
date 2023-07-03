@@ -1,6 +1,6 @@
 class DSA101_Queue {
 	constructor(initCapacity = 20) {
-		this.quque = new Array(initCapacity);
+		this.queue = new Array(initCapacity);
 		this.headIndex = -1;
 		this.tailIndex = -1;
 		this.capacity = initCapacity;
@@ -12,7 +12,7 @@ class DSA101_Queue {
 	}
 
 	peek() {
-		return this.quque[this.headIndex % this.initCapacity];
+		return this.queue[this.headIndex % this.capacity];
 	}
 
 	push(value) {
@@ -20,14 +20,14 @@ class DSA101_Queue {
 		if (this.headIndex == -1) {
 			this.headIndex = this.tailIndex;
 		}
-		this.quque[this.tailIndex % this.initCapacity] = value;
+		this.queue[this.tailIndex % this.capacity] = value;
 		this.size++;
 	}
 
 	pop() {
 		if (this.headIndex == -1) return undefined;
 		var output = this.peek();
-		this.quque[this.headIndex % this.initCapacity] = undefined;
+		this.queue[this.headIndex % this.capacity] = undefined;
 		this.headIndex++;
 		this.size--;
 		if (this.size <= 0) {
@@ -39,14 +39,14 @@ class DSA101_Queue {
 	toString() {
 		let output = "DSA101_Queue:\n{";
 		output += "\tsize = " + this.size + "\n";
-		output += "\tinitCapacity = " + this.initCapacity + "\n";
+		output += "\tinitCapacity = " + this.capacity + "\n";
 		output += "\theadIndex = " + this.headIndex + "\n";
 		output += "\ttailIndex = " + this.tailIndex + "\n";
 		output += "\tqueue = [\n";
 		var currIndex = -1;
 		for (let offset = 0; offset < this.size; offset++) {
 			currIndex = this.headIndex + offset;
-			output += "\t\t(index=" + currIndex + ",value=" + this.quque[currIndex % this.initCapacity] + ")\n";
+			output += "\t\t(index=" + currIndex + ",value=" + this.queue[currIndex % this.capacity] + ")\n";
 		}
 		output += "\t]\n";
 		output += "}";

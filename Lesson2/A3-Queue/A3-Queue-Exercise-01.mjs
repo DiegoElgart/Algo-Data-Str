@@ -12,7 +12,7 @@ class ChatClient {
 	readMsg() {
 		if (this.inboundMsgQ.isEmpty()) return;
 		var msg = this.inboundMsgQ.pop();
-		console.log(new Date().toISOString() + " [" + this.id + "]: " + msg);
+		console.log(new Date().toISOString() + " [" + this.id + "]: " + "<<");
 	}
 }
 
