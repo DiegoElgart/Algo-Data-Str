@@ -15,11 +15,11 @@ export class DSA101_DoubleLL {
 	}
 
 	add(value) {
-		const newNode = new DSA101_DoubleLL_Node(value, null, this.tail);
+		this.tail = new DSA101_DoubleLL_Node(value, this.tail, null);
 		if (this.head == null) {
-			this.head = newNode;
+			this.head = this.tail;
 		}
-		if (newNode.prev != null) {
+		if (this.tail.prev != null) {
 			this.tail.prev.next = this.tail;
 		}
 		this.size++;

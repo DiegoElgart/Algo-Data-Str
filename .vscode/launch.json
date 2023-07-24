@@ -9,7 +9,7 @@
 			"request": "launch",
 			"name": "Launch Program",
 			"skipFiles": ["<node_internals>/**"],
-			"program": "${workspaceFolder}\\Lesson3\\A5-DoubleLL\\A5-DoubleLL-Exercise-01.mjs"
+			"program": "${workspaceFolder}\\Lesson4\\A6-HashMap\\A6-HashMap-Exercise-01.mjs"
 		}
 	]
 }
