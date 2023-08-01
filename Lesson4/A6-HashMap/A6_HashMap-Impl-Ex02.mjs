@@ -1,9 +1,9 @@
-export class DSA101_HashMap2 {
+export class DSA101_HashMap {
 	constructor(initCapacity = 16, loadFactor = 0.75) {
 		this.buckets = [];
 		this.allocated = initCapacity;
-		this.loadFactor = loadFactor;
 		this.occupied = 0;
+		this.loadFactor = loadFactor;
 		for (let i = 0; i < this.allocated; i++) {
 			this.buckets.push(null);
 		}
@@ -21,7 +21,7 @@ export class DSA101_HashMap2 {
 
 	set(key, value) {
 		if (this.occupied >= this.allocated * this.loadFactor) {
-		
+			this.rehash();
 		}
 		const bucketIndex = this.getIndex(key);
 		if (!bucketIndex) return;
@@ -70,6 +70,26 @@ export class DSA101_HashMap2 {
 		// return
 		return hashValue;
 	}
+
+	rehash() {
+		// Savepoint
+		const oldBuckets = this.buckets;
+		// Reallocate the buckets array
+		this.buckets = [];
+		this.allocated *= 2;
+		this.occupied = 0;
+		for (let i = 0; i < this.allocated; i++) {
+			this.buckets.push(null);
+		}
+		// Re-calculate the entrie HashMap
+		for (let i = 0; i > oldBuckets.length; i++) {
+			if (oldBuckets[i] != null) {
+				for (let j = 0; oldBuckets[i].length; j++) {
+					this.set(oldBuckets[i[j]].key, oldBuckets[i][j].value);
+				}
+			}
+		}
+	}
 	toString() {
 		let outStr = "DSA101_HashMap::{";
 		outStr += '"allocated":' + this.allocated;
@@ -95,4 +115,4 @@ export class DSA101_HashMap2 {
 	}
 }
 
-export default DSA101_HashMap2;
+export default DSA101_HashMap;

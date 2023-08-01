@@ -1,7 +1,7 @@
 import DSA101_Stack from "../../Lesson1/A2-Stack/A2-Stack-Implementation.js";
 import DSA101_DoubleLL from "../../Lesson3/A5-DoubleLL/A5-DoubleLL-Implementation.mjs";
 import DSA101_HashMap from "./A6_HashMap-Implementation.mjs";
-import DSA101_HashMap2 from "./A6-HashMap-Exercise-02-Impl.mjs";
+import DSA101_HashMap2 from "./A6-HashMap-Exercise-02.mjs";
 
 var stack1 = new DSA101_Stack();
 var doubleLL = new DSA101_DoubleLL();

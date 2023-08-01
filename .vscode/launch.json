@@ -9,6 +9,28 @@
 			"request": "launch",
 			"name": "Launch Program",
 			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}\\Lesson5\\B1-Recursion\\B1-Recursion-Ex02.js"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}\\Lesson4\\A7-BinaryTree\\A7-BST-CodeSample.mjs"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}\\Lesson4\\A6-HashMap\\A6-HashMap-Exercise-02.mjs"
+		},
+
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"skipFiles": ["<node_internals>/**"],
 			"program": "${workspaceFolder}\\Lesson4\\A6-HashMap\\A6-HashMap-Exercise-01.mjs"
 		}
 	]
