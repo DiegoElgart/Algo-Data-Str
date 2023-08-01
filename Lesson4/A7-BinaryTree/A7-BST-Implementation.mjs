@@ -1,4 +1,4 @@
-import DSA101_BST_Node from "./A7-BST-Node.mjs";
+import DSA101_BST_Node from "../A7-BinaryTree/A7-BST-Node.mjs";
 
 export class DSA101_BST {
 	constructor() {
@@ -43,8 +43,8 @@ export class DSA101_BST {
 
 	remove(value) {
 		if (this.root == null) return null;
-        //Check if value exists in tree
-        let valueNode
+		//Check if value exists in tree
+		let valueNode;
 	}
 
 	quickPrint() {

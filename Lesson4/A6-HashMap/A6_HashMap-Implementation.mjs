@@ -1,7 +1,7 @@
 export class DSA101_HashMap {
-	constructor(initCapacity = 16) {
+	constructor(initCapoacity = 16) {
 		this.buckets = [];
-		this.allocated = initCapacity;
+		this.allocated = initCapoacity;
 		this.occupied = 0;
 		for (let i = 0; i < this.allocated; i++) {
 			this.buckets.push(null);
@@ -23,7 +23,7 @@ export class DSA101_HashMap {
 		if (!bucketIndex) return;
 		// new entry to add to HashMap
 		let newEntry = { key, value };
-		// is bucket already occupied
+		// Is bucket already occupied
 		if (this.buckets[bucketIndex] == null) {
 			this.buckets[bucketIndex] = [];
 		} else {
@@ -33,7 +33,7 @@ export class DSA101_HashMap {
 		}
 		// Add entry to bucket array
 		this.buckets[bucketIndex].push(newEntry);
-		// Increment occupied
+		// Incerement occupied
 		this.occupied++;
 	}
 
@@ -44,7 +44,7 @@ export class DSA101_HashMap {
 		if (this.buckets[bucketIndex] == null) {
 			return null;
 		}
-		// Search in bucket fo key
+		// Search in bucket for key
 		for (let i = 0; i < this.buckets[bucketIndex].length; i++) {
 			if (key === this.buckets[bucketIndex][i].key) {
 				return this.buckets[bucketIndex][i].value;
@@ -52,20 +52,24 @@ export class DSA101_HashMap {
 		}
 		return null;
 	}
-	hash1(key) {
-		let hashValue = 0;
-		if (key == null) return 0;
-		// Generate unique hashing source from key and type of key object
-		const stringWithKeyAndType = `${key}${typeof key}`;
 
-		// Loop on unique has source
-		for (let i = 0; i < stringWithKeyAndType.length; i++) {
-			const charVal = stringWithKeyAndType.charCodeAt(i);
-			hashValue += charVal << (i * 8);
+	// Calculate the hash value of the key - method 1
+	hash1(key) {
+		// starts with 0 value
+		let hashVal = 0;
+		// generate a unique key data indentifier composed of value + type
+		const stringKeyWithType = `${key}${typeof key}`;
+		// Loop on the unique kay data identifier
+		for (let i = 0; i < stringKeyWithType.length; i++) {
+			// convert each character to a number
+			const charVal = stringKeyWithType.charCodeAt(i);
+			// accumulate in increasing significance byte by byte
+			hashVal += (charVal & charVal) << (i * 8);
 		}
-		// return
-		return hashValue;
+		// result is a numeric value of the bytes of the unique data identifier
+		return hashVal;
 	}
+
 	toString() {
 		let outStr = "DSA101_HashMap::{";
 		outStr += '"allocated":' + this.allocated;

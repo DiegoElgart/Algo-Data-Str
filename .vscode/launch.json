@@ -9,6 +9,41 @@
 			"request": "launch",
 			"name": "Launch Program",
 			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}\\Lesson6\\B7-BSTInsertSort\\B7-BSTInsertSort-Implementation.mjs"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}\\Lesson6\\B6-QuickSort\\B6-QuickSort-Implementation.js"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}\\Lesson6\\B5-BubbleSort\\B5-BubbleSort-Implementation.js"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}\\Lesson6\\B4-RadixSort\\B4-RadixSort-Implementation.js"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}\\Lesson5\\B3-BinarySearch\\B3-BinarySearch-Ex01.mjs"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"skipFiles": ["<node_internals>/**"],
 			"program": "${workspaceFolder}\\Lesson5\\B1-Recursion\\B1-Recursion-Ex02.js"
 		},
 		{
